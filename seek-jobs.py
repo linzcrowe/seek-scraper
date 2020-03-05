@@ -29,9 +29,7 @@ def get_jobs(html):
 
 def simple_get(url):
     """
-    Attempts to get the content at `url` by making an HTTP GET request.
-    If the content-type of response is some kind of HTML/XML, return the
-    text content, otherwise return None.
+    Performs a simple HTTP REST get
     """
     try:
         with closing(get(url, stream=True)) as resp:
